@@ -34,7 +34,7 @@ const AddPizzeria = () => {
       type: "image/jpg",
     });
     try {
-      const response = await client.post("/create/", data); postedAlert();
+      const response = await client.post("api/create/", data); postedAlert();
     } catch(error) {
         console.log(error);
       };

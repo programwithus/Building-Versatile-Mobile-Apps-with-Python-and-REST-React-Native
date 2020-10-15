@@ -7,9 +7,10 @@ import { StyleSheet, SafeAreaView, View,Text, Image, TouchableOpacity, FlatList 
 const ListView = ({ navigation }) => {
     const [data, setData] = useState([]);
     const getList = async () => {
-        const response = await client.get("/");
-        setData(response.data);
-      };
+      console.log(client);
+      const response = await client.get("/api");
+      setData(response.data);
+    };
 
     useEffect(() => {
         getList();
